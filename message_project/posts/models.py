@@ -9,6 +9,7 @@ class Post(models.Model):
         on_delete=models.CASCADE,
     )
     body = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
     
     def __str__(self):
         return self.title
